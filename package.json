@@ -4,7 +4,8 @@
   "description": "Digital marketing landing page using HTML, SCSS, Javascript, Webpack.",
   "main": "dist/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hint": "npx hint ."
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/shahadat3669/digital-marketing/issues"
   },
-  "homepage": "https://github.com/shahadat3669/digital-marketing#readme"
+  "homepage": "https://github.com/shahadat3669/digital-marketing#readme",
+  "devDependencies": {
+    "hint": "^7.1.3"
+  }
 }
