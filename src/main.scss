@@ -211,3 +211,59 @@ $font-poppins: 'Poppins', sans-serif;
   color: $dark-2;
   font-weight: 500;
 }
+
+// header section
+.header {
+  font-family: $font-poppins;
+
+  &__nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: $light-1;
+    flex-direction: column;
+  }
+
+  &__logo-link {
+    font-weight: 600;
+    font-size: 2.2em;
+    line-height: 3rem;
+    color: $dark-1;
+  }
+
+  &__toggle-btn {
+    font-size: 2em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1rem;
+  }
+
+  &__nav-collapse {
+    max-height: 0px;
+    overflow-y: hidden;
+    transition: all 0.9s ease;
+  }
+
+  &__nav-list {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 3rem;
+  }
+
+  &__nav-item {
+    padding: 0 1.5rem;
+    line-height: 3rem;
+    font-size: 1.1em;
+  }
+
+  &__nav-active {
+    max-height: 50vh !important;
+  }
+
+  &__nav-btn {
+    display: none;
+  }
+}
