@@ -231,6 +231,10 @@ $font-poppins: 'Poppins', sans-serif;
       padding-right: 6rem !important;
       justify-content: space-between;
     }
+
+    @media (min-width: 1280px) {
+      background: transparent !important;
+    }
   }
 
   &__logo-link {
@@ -289,5 +293,9 @@ $font-poppins: 'Poppins', sans-serif;
 
   &__nav-btn {
     display: none;
+
+    @media (min-width: 1280px) {
+      display: inline-block !important;
+    }
   }
 }
