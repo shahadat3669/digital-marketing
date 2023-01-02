@@ -60,3 +60,116 @@ $shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
 
 /* font family */
 $font-poppins: 'Poppins', sans-serif;
+
+// base classes
+.container {
+  width: 100%;
+  &--fluid {
+    width: 98%;
+  }
+}
+
+.flex {
+  display: flex;
+  &__row {
+    flex-direction: row;
+  }
+
+  &__column {
+    flex-direction: column;
+  }
+
+  &__wrap {
+    flex-wrap: wrap;
+  }
+
+  &--initial {
+    flex: 0 1 auto;
+  }
+
+  &__grow {
+    flex-grow: 1;
+  }
+}
+
+.mx {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+
+  &--auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.py {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  &--2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &--5 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &--10 {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
+
+.px {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  &--5 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  &--10 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
+
+.w {
+  width: inherit;
+
+  &--50 {
+    width: 50%;
+  }
+
+  &--100 {
+    width: 100%;
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+.cols {
+  &--1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: $dark-1;
+
+  &:hover {
+    color: $dark-2;
+  }
+}
