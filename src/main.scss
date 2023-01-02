@@ -1,7 +1,301 @@
 // add google fonts
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-.title {
-  font-family: 'Poppins', sans-serif;
-  color: #312f2f;
+// reset css
+* > * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  list-style: none;
+}
+
+body {
+  line-height: 1;
+}
+
+// variables
+$light-1: #f8f9fa;
+$light-2: #f6f6f6;
+$light-3: #fcffe7;
+$light-4: #bad7e9;
+
+$dark-1: #2b3467;
+$dark-2: rgba(26, 55, 97, 0.9);
+$gray: #808291;
+$primary: #eb455f;
+
+/* gradient colors */
+$gradient-1: linear-gradient(to right, #ff5400, #9e0059);
+$gradient-2: linear-gradient(to right, #8338ec, #390099);
+$gradient-3: linear-gradient(to right, #fff7f3, #fff7f3);
+
+// shadow
+$shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+
+/* font family */
+$font-poppins: 'Poppins', sans-serif;
+
+// base classes
+.container {
+  width: 100%;
+
+  @media (min-width: 640px) {
+    max-width: 640px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+
+  &--fluid {
+    width: 98%;
+  }
+}
+
+.flex {
+  display: flex;
+  &__row {
+    flex-direction: row;
+  }
+
+  &__column {
+    flex-direction: column;
+  }
+
+  &__wrap {
+    flex-wrap: wrap;
+  }
+
+  &--initial {
+    flex: 0 1 auto;
+  }
+
+  &__grow {
+    flex-grow: 1;
+  }
+}
+
+.mx {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+
+  &--auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.py {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  &--2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &--5 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &--10 {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
+
+.px {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  &--5 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  &--10 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
+
+.w {
+  width: inherit;
+
+  &--50 {
+    width: 50%;
+  }
+
+  &--100 {
+    width: 100%;
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+.cols {
+  &--1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: $dark-1;
+
+  &:hover {
+    color: $dark-2;
+  }
+
+  &__primary {
+    padding: 0.8rem 2rem;
+    background: $gradient-1;
+    color: $light-1;
+    border-radius: 50px;
+    font-family: $font-poppins;
+    font-weight: 500;
+    box-shadow: $shadow;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $light-1;
+      background: $gradient-2;
+    }
+  }
+}
+
+.link {
+  color: $dark-2;
+  font-weight: 500;
+}
+
+// header section
+.header {
+  font-family: $font-poppins;
+
+  &__nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: $light-1;
+    flex-direction: column;
+
+    @media (min-width: 1024px) {
+      flex-direction: row !important;
+      padding-left: 6rem !important;
+      padding-right: 6rem !important;
+      justify-content: space-between;
+    }
+
+    @media (min-width: 1280px) {
+      background: transparent !important;
+    }
+  }
+
+  &__logo-link {
+    font-weight: 600;
+    font-size: 2.2em;
+    line-height: 3rem;
+    color: $dark-1;
+  }
+
+  &__toggle-btn {
+    font-size: 2em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1rem;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__nav-collapse {
+    max-height: 0px;
+    overflow-y: hidden;
+    transition: all 0.9s ease;
+
+    @media (min-width: 1024px) {
+      max-height: initial !important;
+      flex-direction: row !important;
+    }
+  }
+
+  &__nav-list {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 3rem;
+
+    @media (min-width: 1024px) {
+      flex-direction: row !important;
+    }
+  }
+
+  &__nav-item {
+    padding: 0 1.5rem;
+    line-height: 3rem;
+    font-size: 1.1em;
+  }
+
+  &__nav-active {
+    max-height: 50vh !important;
+
+    @media (min-width: 1024px) {
+      max-height: 100% !important;
+    }
+  }
+
+  &__nav-btn {
+    display: none;
+
+    @media (min-width: 1280px) {
+      display: inline-block !important;
+    }
+  }
 }
