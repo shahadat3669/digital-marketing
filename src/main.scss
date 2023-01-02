@@ -46,7 +46,7 @@ $light-3: #fcffe7;
 $light-4: #bad7e9;
 
 $dark-1: #2b3467;
-$dark-2: #1a37601a;
+$dark-2: rgba(26, 55, 97, 0.9);
 $gray: #808291;
 $primary: #eb455f;
 
@@ -64,6 +64,23 @@ $font-poppins: 'Poppins', sans-serif;
 // base classes
 .container {
   width: 100%;
+
+  @media (min-width: 640px) {
+    max-width: 640px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+
   &--fluid {
     width: 98%;
   }
@@ -172,4 +189,25 @@ $font-poppins: 'Poppins', sans-serif;
   &:hover {
     color: $dark-2;
   }
+
+  &__primary {
+    padding: 0.8rem 2rem;
+    background: $gradient-1;
+    color: $light-1;
+    border-radius: 50px;
+    font-family: $font-poppins;
+    font-weight: 500;
+    box-shadow: $shadow;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $light-1;
+      background: $gradient-2;
+    }
+  }
+}
+
+.link {
+  color: $dark-2;
+  font-weight: 500;
 }
