@@ -54,6 +54,17 @@
   padding-bottom: $size;
 }
 
+// mixin for margin
+@mixin mx($size: 0.5rem) {
+  margin-left: $size;
+  margin-right: $size;
+}
+
+@mixin my($size: 0.5rem) {
+  margin-top: $size;
+  margin-bottom: $size;
+}
+
 // reset css
 * > * {
   box-sizing: border-box;
