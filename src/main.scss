@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 // mixins
-@mixin for-phone-only {
+@mixin for-phone-up {
   @media (min-width: 40rem) {
     // 640px
     @content;
@@ -130,7 +130,7 @@ body {
 .container {
   width: 100%;
 
-  @include for-phone-only {
+  @include for-phone-up {
     max-width: 40rem;
   }
 
@@ -369,7 +369,35 @@ body {
   }
 }
 
-// footer sect
+// ready section
+.ready {
+  &__inner {
+    box-shadow: $shadow;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: $dark-1;
+
+    @include for-phone-up {
+      font-size: 3rem;
+    }
+  }
+
+  &__text {
+    color: $gray;
+    line-height: 1.5rem;
+    @include py;
+  }
+}
+
+// footer section
 .footer {
   border-top: 2px solid $light-1;
   margin-top: 8em;
@@ -398,7 +426,12 @@ body {
     @include py;
   }
 
-  &__form{
+  &__form {
     justify-content: center;
+  }
+
+  &__copyrights-text,
+  &__copyrights-link {
+    color: $gray;
   }
 }
