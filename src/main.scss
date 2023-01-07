@@ -273,6 +273,14 @@ body {
   font-weight: 500;
 }
 
+.list {
+  @include py(1.5rem);
+
+  &__link {
+    color: $gray;
+  }
+}
+
 // header section
 .header {
   font-family: $font-poppins;
