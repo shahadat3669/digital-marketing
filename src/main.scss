@@ -38,8 +38,8 @@
 }
 
 // mixin for cols
-@mixin cols($start: 1) {
-  grid-template-columns: repeat($start, minmax(0, 1fr));
+@mixin cols($number: 1) {
+  grid-template-columns: repeat($number, minmax(0, 1fr));
   @content;
 }
 
@@ -378,6 +378,7 @@ body {
     column-gap: 3em;
     padding: 6em 0;
     border-bottom: 2px solid $light-1;
+    @include cols;
 
     @include for-tablet-portrait-up {
       @include cols(2);
@@ -395,5 +396,9 @@ body {
   &__item {
     color: $gray;
     @include py;
+  }
+
+  &__form{
+    justify-content: center;
   }
 }
