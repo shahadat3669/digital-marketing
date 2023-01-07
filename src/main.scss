@@ -37,6 +37,11 @@
   }
 }
 
+@mixin cols($start: 1) {
+  grid-template-columns: repeat($start, minmax(0, 1fr));
+  @content;
+}
+
 // reset css
 * > * {
   box-sizing: border-box;
