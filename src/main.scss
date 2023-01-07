@@ -102,20 +102,20 @@ body {
 .container {
   width: 100%;
 
-  @media (min-width: 640px) {
-    max-width: 640px;
+  @include for-phone-only {
+    max-width: 40rem;
   }
 
-  @media (min-width: 768px) {
-    max-width: 768px;
+  @include for-tablet-portrait-up {
+    max-width: 48rem;
   }
 
-  @media (min-width: 1024px) {
-    max-width: 1024px;
+  @include for-desktop-up {
+    max-width: 64rem;
   }
 
-  @media (min-width: 1280px) {
-    max-width: 1280px;
+  @include for-big-desktop-up {
+    max-width: 80rem;
   }
 
   &--fluid {
@@ -262,14 +262,14 @@ body {
     background: $light-1;
     flex-direction: column;
 
-    @media (min-width: 1024px) {
+    @include for-desktop-up {
       flex-direction: row !important;
       padding-left: 6rem !important;
       padding-right: 6rem !important;
       justify-content: space-between;
     }
 
-    @media (min-width: 1280px) {
+    @include for-big-desktop-up {
       background: transparent !important;
     }
   }
@@ -288,7 +288,7 @@ body {
     top: 0;
     padding: 1rem;
 
-    @media (min-width: 1024px) {
+    @include for-desktop-up {
       display: none;
     }
   }
@@ -298,7 +298,7 @@ body {
     overflow-y: hidden;
     transition: all 0.9s ease;
 
-    @media (min-width: 1024px) {
+    @include for-desktop-up {
       max-height: initial !important;
       flex-direction: row !important;
     }
@@ -309,7 +309,7 @@ body {
     text-align: center;
     padding: 0 3rem;
 
-    @media (min-width: 1024px) {
+    @include for-desktop-up {
       flex-direction: row !important;
     }
   }
@@ -323,7 +323,7 @@ body {
   &__nav-active {
     max-height: 50vh !important;
 
-    @media (min-width: 1024px) {
+    @include for-desktop-up {
       max-height: 100% !important;
     }
   }
@@ -331,7 +331,7 @@ body {
   &__nav-btn {
     display: none;
 
-    @media (min-width: 1280px) {
+    @include for-big-desktop-up {
       display: inline-block !important;
     }
   }
