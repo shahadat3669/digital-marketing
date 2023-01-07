@@ -1,6 +1,42 @@
 // add google fonts
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+// mixins
+@mixin for-phone-only {
+  @media (min-width: 40rem) {
+    // 640px
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 48rem) {
+    // 768px
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: 56rem) {
+    // 896px
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: 64rem) {
+    // 1024px
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: 80rem) {
+    // 1280px
+    @content;
+  }
+}
+
 // reset css
 * > * {
   box-sizing: border-box;
