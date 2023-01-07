@@ -35,10 +35,6 @@ ol {
   list-style: none;
 }
 
-body {
-  line-height: 1;
-}
-
 // variables
 $light-1: #f8f9fa;
 $light-2: #f6f6f6;
@@ -62,6 +58,11 @@ $shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
 $font-poppins: 'Poppins', sans-serif;
 
 // base classes
+body {
+  font-family: $font-poppins;
+  line-height: 1;
+}
+
 .container {
   width: 100%;
 
