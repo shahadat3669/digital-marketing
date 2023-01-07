@@ -368,3 +368,32 @@ body {
     }
   }
 }
+
+// footer sect
+.footer {
+  border-top: 2px solid $light-1;
+  margin-top: 8em;
+
+  &__list {
+    column-gap: 3em;
+    padding: 6em 0;
+    border-bottom: 2px solid $light-1;
+
+    @include for-tablet-portrait-up {
+      @include cols(2);
+    }
+
+    @include for-desktop-up {
+      @include cols(4);
+    }
+  }
+
+  & h3 {
+    color: $dark-1;
+  }
+
+  &__item {
+    color: $gray;
+    @include py;
+  }
+}
