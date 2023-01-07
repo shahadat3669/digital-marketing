@@ -37,9 +37,21 @@
   }
 }
 
+// mixin for cols
 @mixin cols($start: 1) {
   grid-template-columns: repeat($start, minmax(0, 1fr));
   @content;
+}
+
+// mixin for padding
+@mixin px($size: 0.5rem) {
+  padding-left: $size;
+  padding-right: $size;
+}
+
+@mixin py($size: 0.5rem) {
+  padding-top: $size;
+  padding-bottom: $size;
 }
 
 // reset css
