@@ -281,6 +281,42 @@ body {
   }
 }
 
+.card {
+  box-shadow: $shadow;
+
+  &__img {
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__content-subtitle {
+    color: $gray;
+    line-height: 1.8;
+  }
+
+  &__content-title {
+    font-size: 1.5rem;
+    color: $dark-1;
+    font-weight: 700;
+  }
+
+  &--article {
+    border-radius: 10px;
+  }
+}
+
+.title {
+  &--sub {
+    color: $primary;
+    display: block;
+  }
+
+  &--2 {
+    color: $dark-1;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
 // header section
 .header {
   font-family: $font-poppins;
@@ -365,6 +401,16 @@ body {
 
     @include for-big-desktop-up {
       display: inline-block !important;
+    }
+  }
+}
+
+// article section
+.articles {
+  &__card-container {
+    @include for-desktop-up {
+      @include cols(3);
+      column-gap: 5rem;
     }
   }
 }
