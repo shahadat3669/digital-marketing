@@ -299,6 +299,19 @@ body {
   }
 }
 
+.title {
+  &--sub {
+    color: $primary;
+    display: block;
+  }
+
+  &--2 {
+    color: $dark-1;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
 // header section
 .header {
   font-family: $font-poppins;
@@ -389,8 +402,6 @@ body {
 
 // article section
 .articles {
-  &__title-container {
-  }
   &__card-container {
     @include for-desktop-up {
       @include cols(3);
