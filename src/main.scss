@@ -283,6 +283,11 @@ body {
 
 .card {
   box-shadow: $shadow;
+
+  &__img {
+    border-radius: 10px 10px 0 0;
+  }
+
   &__content-subtitle {
     color: $gray;
     line-height: 1.8;
